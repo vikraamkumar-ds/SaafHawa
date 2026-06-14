@@ -8,6 +8,7 @@
    To force a specific backend URL, hard-code it:
      API_BASE: "https://your-backend.com"
 */
+/*
 (function () {
   const isLocalDev =
     location.hostname === "localhost" ||
@@ -16,5 +17,18 @@
 
   window.SAAFHAWA_CONFIG = {
     API_BASE: isLocalDev ? "http://localhost:8000" : "/api",
+  };
+})();
+*/
+
+(function () {
+  const isLocalDev =
+    location.hostname === "localhost" ||
+    location.hostname === "127.0.0.1" ||
+    location.hostname === "0.0.0.0";
+  window.SAAFHAWA_CONFIG = {
+    API_BASE: isLocalDev
+      ? "http://localhost:8000"
+      : "https://saafhawa-production-648b.up.railway.app",
   };
 })();
