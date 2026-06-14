@@ -18,7 +18,7 @@
 
 ---
 
-## Part 1 — Fork the Repository
+## Part 1 — Fork the Repository if needed.
 
 1. Go to 👉 https://github.com/mmoneka11/SaafHawa
 2. Click **"Fork"** (top right)
