@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>About — SaafHawa</title>
+<meta name="description" content="The team and mission behind SaafHawa — built for the AI for Civic Innovation Hackathon 2026." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&family=Noto+Nastaliq+Urdu:wght@500;700&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="has-nav">
+<div id="nav-slot"></div>
+
+<!-- intro -->
+<section class="section">
+  <p class="section-head">About SaafHawa</p>
+  <h1 class="section-title" style="font-size:38px">Civic tech for the people who feel the air first.</h1>
+  <p class="section-lede">
+    Pakistan's cities sit near the top of every "most polluted air" list in the world,
+    and the people who pay the price are the ones least equipped to read the data — parents
+    deciding on a school run, an elderly relative breathing through a smoggy morning, a pregnant
+    woman, a delivery rider working outdoors all day, anyone with asthma or pollen allergy.
+    SaafHawa takes the open AQI data that already exists and turns it into a clear, per-household,
+    bilingual decision — in the language people actually think in.
+  </p>
+</section>
+
+<!-- hackathon themes -->
+<section class="section">
+  <p class="section-head">Hackathon themes</p>
+  <h2 class="section-title">Two themes, one problem.</h2>
+
+  <div class="values">
+    <div class="value">
+      <div class="bullet" style="background:var(--brand)"></div>
+      <div>
+        <h4>Technology for Civic Good</h4>
+        <p>Uses AI to tackle a daily public-health challenge — air pollution — and improve how life-protecting guidance reaches ordinary citizens.</p>
+      </div>
+    </div>
+    <div class="value">
+      <div class="bullet" style="background:var(--mod)"></div>
+      <div>
+        <h4>Open Data &amp; Access to Information</h4>
+        <p>Takes public, open air-quality data that most people can't interpret and makes it transparent, actionable, and accessible in the language they actually think in.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- principles -->
+<section class="section">
+  <p class="section-head">How we built it</p>
+  <h2 class="section-title">Five principles.</h2>
+
+  <div class="cards" style="grid-template-columns:repeat(2,1fr)">
+    <div class="card">
+      <div class="ic" style="background:var(--brand)">1</div>
+      <h3>Interpretation, not measurement</h3>
+      <p>The AQI exists. The gap is making it actionable. AI shines exactly here — turning a number into safe, personalised, plain-language advice.</p>
+    </div>
+    <div class="card">
+      <div class="ic" style="background:var(--good)">2</div>
+      <h3>Bilingual as a first-class output</h3>
+      <p>Urdu isn't a translation toggle. The model emits EN + UR side by side, rendered in proper Nastaliq.</p>
+    </div>
+    <div class="card">
+      <div class="ic" style="background:var(--usg)">3</div>
+      <h3>Designed for failure</h3>
+      <p>Open APIs go down, free tiers rate-limit, Pakistani Wi-Fi is unreliable. Every layer has a fallback so guidance always loads.</p>
+    </div>
+    <div class="card">
+      <div class="ic" style="background:var(--unh)">4</div>
+      <h3>A frozen JSON contract</h3>
+      <p>Backend and frontend speak through a strict Pydantic schema. The LLM is locked to JSON mode against it.</p>
+    </div>
+    <div class="card">
+      <div class="ic" style="background:var(--vunh)">5</div>
+      <h3>Zero-cost civic stack</h3>
+      <p>Open AQI data, free-tier LLM, SQLite. Anyone in Pakistan can fork it and run it for their own city.</p>
+    </div>
+    <div class="card">
+      <div class="ic" style="background:var(--haz)">6</div>
+      <h3>Scales by reach, not size</h3>
+      <p>Planned WhatsApp / SMS delivery puts guidance on any phone — no app, no smartphone required.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section">
+  <p class="section-head">Team</p>
+  <h2 class="section-title">Two people. One week.</h2>
+  <p class="section-lede">Built end-to-end during the hackathon — backend, AI layer, bilingual frontend, deck, and demo.</p>
+  <div class="team-grid" id="team-grid"></div>
+</section>
+
+<!-- PARTNERS -->
+<section class="section">
+  <p class="section-head">Hackathon</p>
+  <h2 class="section-title">Organized by Code for Pakistan.</h2>
+  <p class="section-lede">In collaboration with Grey Software, Scrimba and FAST NUCES Islamabad.</p>
+  <div class="partners" id="partners"></div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="card" style="background:#fff; border:1px solid var(--line); padding:28px 26px; box-shadow:var(--shadow)">
+    <h3 style="font-size:22px; margin:0 0 6px">See it for yourself.</h3>
+    <p style="margin:0 0 16px; color:var(--ink-soft)">The fastest way to understand SaafHawa is to try it on today's air.</p>
+    <a class="btn primary" href="app.html">Launch the app →</a>
+  </div>
+</section>
+
+<div id="footer-slot"></div>
+
+<script src="config.js"></script>
+<script src="team.js"></script>
+<script src="shared.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    renderTeam("team-grid");
+    renderPartners("partners");
+  });
+</script>
+</body>
+</html>

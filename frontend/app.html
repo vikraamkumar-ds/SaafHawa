@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SaafHawa — Action plan for today's air</title>
+<meta name="description" content="Get today's bilingual action plan for Lahore, Karachi or Islamabad — tailored to your household." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&family=Noto+Nastaliq+Urdu:wght@500;700&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="has-nav">
+<div id="nav-slot"></div>
+
+<div class="wrap" style="padding-top:8px">
+
+  <header>
+    <div class="brand">
+      <div>
+        <div class="word" data-i18n="title">Your action plan</div>
+        <div class="tag" data-i18n="tagline">Air-quality data, turned into a decision you can act on — in your language.</div>
+      </div>
+    </div>
+    <div class="langtog" id="langtog" role="tablist" aria-label="Language">
+      <button class="on" data-lang="en" role="tab" aria-selected="true">EN</button>
+      <button data-lang="ur" role="tab" aria-selected="false">اردو</button>
+    </div>
+  </header>
+
+  <!-- 1. Location + AQI -->
+  <section class="panel">
+    <p class="eyebrow" data-i18n="step1">1 — Where are you</p>
+    <div>
+      <label class="field" for="location" data-i18n="locationLabel">Location</label>
+      <select id="location"></select>
+    </div>
+    <div class="aqi-row">
+      <div class="dial" id="dial">—</div>
+      <div class="aqi-meta">
+        <div class="aqi-cat" id="aqiCat" data-i18n="aqiLoading">Loading…</div>
+        <div class="aqi-sub" id="aqiSub">—</div>
+      </div>
+    </div>
+    <p class="demo-note" data-i18n="demoNote">Live AQI from open public sources (WAQI / aqicn).</p>
+  </section>
+
+  <!-- 2. Household -->
+  <section class="panel">
+    <p class="eyebrow" data-i18n="step2">2 — Who are you protecting</p>
+    <label class="field" data-i18n="step2Hint">Pick everyone in your home this affects. The advice changes for each.</label>
+    <div class="chips" id="chips"></div>
+  </section>
+
+  <button class="cta" id="go" data-i18n="cta">Get today's action plan</button>
+
+  <!-- 3. Verdict -->
+  <section id="verdict" aria-live="polite">
+    <div class="vcard">
+      <div class="vtop" id="vtop">
+        <div class="vrisk" id="vrisk"></div>
+        <div class="vmain" id="vmain"></div>
+        <div class="vmirror urdu" id="vmirror"></div>
+      </div>
+      <div class="vbody">
+        <h4 id="actionsHead">Do this today</h4>
+        <ul class="actions" id="actions"></ul>
+        <div class="why" id="why"></div>
+        <div class="src-tag" id="srcTag"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Ask anything -->
+  <section class="panel">
+    <p class="eyebrow" data-i18n="step3">3 — Ask anything</p>
+    <label class="field" for="q" data-i18n="askHint">Ask in plain words. SaafHawa answers for your air and your household.</label>
+    <div class="askrow">
+      <input id="q" placeholder="Is it safe to send the kids to school at 8am?" />
+      <button id="ask" data-i18n="askBtn">Ask</button>
+    </div>
+    <div class="suggest" id="suggest"></div>
+    <div class="answer" id="answer" aria-live="polite"></div>
+  </section>
+</div>
+
+<div id="footer-slot"></div>
+
+<script src="config.js"></script>
+<script src="team.js"></script>
+<script src="shared.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

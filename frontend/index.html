@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SaafHawa — Know Your Air. In Your Language.</title>
+<meta name="description" content="Bilingual AI assistant that turns today's local AQI into a clear per-household action plan for Lahore, Karachi and Islamabad." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&family=Noto+Nastaliq+Urdu:wght@500;700&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="has-nav">
+<div id="nav-slot"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <span class="hero-eyebrow"><span class="dot"></span> AI for Civic Innovation 2026</span>
+    <h1>Air-quality apps show a number.<br/><b>SaafHawa</b> tells you <i>what to do.</i></h1>
+    <p class="lede">
+      A bilingual AI assistant for caregivers across Pakistan. Tell us who's in your home;
+      we turn today's local AQI into a clear, plain-language plan — verdict, steps, and why — in English and Urdu.
+    </p>
+    <div class="hero-ctas">
+      <a class="btn primary" href="app.html">Launch the app →</a>
+      <a class="btn ghost"   href="about.html">About </a>
+    </div>
+  </div>
+
+  <!-- visual: AQI → verdict mini-mockup -->
+  <div class="hero-card">
+    <div class="row">
+      <div class="dial" style="background:var(--unh)">168</div>
+      <div>
+        <div class="label">Lahore · live</div>
+        <div class="meta">PM2.5 dominant · Unhealthy</div>
+      </div>
+      <div class="arrow">→</div>
+    </div>
+    <div class="hero-verdict">
+      <div class="vrisk">Air quality · Unhealthy · AQI 168</div>
+      <div class="vmain">Keep your child indoors until noon — mask the school run.</div>
+      <div class="vur urdu">بچے کو دوپہر تک گھر کے اندر رکھیں۔</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="section">
+  <p class="section-head">The gap</p>
+  <h2 class="section-title">A number is not an answer.</h2>
+  <p class="section-lede">
+    Pakistan already has open AQI data. What it doesn't have is interpretation —
+    a clear, per-person answer in the language people actually think in. SaafHawa closes that last mile.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <div class="ic" style="background:var(--usg)">1</div>
+      <h3>The number is jargon</h3>
+      <p>"AQI 168" means nothing to a parent deciding on the morning school run.</p>
+    </div>
+    <div class="card">
+      <div class="ic" style="background:var(--unh)">2</div>
+      <h3>One size fits nobody</h3>
+      <p>A toddler, a grandparent on heart medication, and a healthy adult need different advice. Apps give one.</p>
+    </div>
+    <div class="card">
+      <div class="ic" style="background:var(--brand)">3</div>
+      <h3>Language barrier</h3>
+      <p>Guidance — when it exists — is English-only. Most caregivers think in Urdu.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section">
+  <p class="section-head">How it works</p>
+  <h2 class="section-title">Four steps. Two languages. One clear decision.</h2>
+
+  <div class="steps">
+    <div class="step">
+      <span class="num">01</span>
+      <h4>Pick your area</h4>
+      <p>Choose between Lahore, Karachi, or Islamabad — and a specific area inside it.</p>
+    </div>
+    <div class="step">
+      <span class="num">02</span>
+      <h4>Set your household</h4>
+      <p>Toggle who's home: child, elderly, pregnant, allergy, heart/lung, outdoor worker.</p>
+    </div>
+    <div class="step">
+      <span class="num">03</span>
+      <h4>Get a bilingual plan</h4>
+      <p>AI turns the AQI into a one-line verdict, 3–4 actions, and a why — in EN and Urdu.</p>
+    </div>
+    <div class="step">
+      <span class="num">04</span>
+      <h4>Ask anything</h4>
+      <p>"Safe to walk to school?" — answered, grounded in your air level and household.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section">
+  <p class="section-head">What's inside</p>
+  <h2 class="section-title">Built to actually be usable.</h2>
+
+  <div class="cards">
+    <div class="card">
+      <div class="ic" style="background:var(--brand)">★</div>
+      <h3>Per-household advice</h3>
+      <p>Six profile flags reshape every verdict, every step, every "why". The AI's value is legible.</p>
+    </div>
+    <div class="card">
+      <div class="ic" style="background:var(--good)">UR</div>
+      <h3>Bilingual by default</h3>
+      <p>Natural Urdu in Nastaliq script — not a translation toggle bolted onto an English UI.</p>
+    </div>
+    <div class="card">
+      <div class="ic" style="background:var(--usg)">⏻</div>
+      <h3>Offline-safe</h3>
+      <p>If the API or the network dies, a deterministic bilingual plan still loads. The demo never goes blank.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA strip -->
+<section class="section">
+  <div class="card" style="background:linear-gradient(140deg,var(--brand),var(--brand-deep)); color:#fff; border:0; box-shadow:var(--shadow); padding:28px 26px">
+    <h3 style="font-size:24px; margin:0">Try it on today's air.</h3>
+    <p style="margin:8px 0 16px; opacity:.92">Pick a city, set a profile, get a plan you can act on.</p>
+    <a class="btn ghost" href="app.html" style="background:#fff; color:var(--brand-deep); border-color:#fff">Launch the app →</a>
+  </div>
+</section>
+
+<div id="footer-slot"></div>
+
+<script src="config.js"></script>
+<script src="team.js"></script>
+<script src="shared.js"></script>
+</body>
+</html>

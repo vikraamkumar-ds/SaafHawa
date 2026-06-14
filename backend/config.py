@@ -18,14 +18,15 @@ WAQI_BASE_URL = "https://api.waqi.info"
 AQI_TTL = int(os.getenv("AQI_TTL", "300"))      # 5 min for air data
 PLAN_TTL = int(os.getenv("PLAN_TTL", "600"))    # 10 min for generated plans
 
-# --- Supported areas: friendly name -> WAQI station/city keyword ---
+# --- Supported areas ---
+# Bare WAQI city keywords. These reliably resolve to Pakistani stations
+# (e.g. US Embassy Lahore/Karachi/Islamabad). Sub-area `geo:` lookups were
+# removed because WAQI returns the nearest station globally — for parts of
+# Pakistan with sparse coverage the nearest station is across the border.
 AREAS = {
-    "lahore": "lahore",
-    "lahore-cantt": "@8245",          # example station id; swap for real
-    "karachi": "karachi",
-    "karachi-korangi": "karachi/korangi",
+    "lahore":    "lahore",
+    "karachi":   "karachi",
     "islamabad": "islamabad",
-    "islamabad-diplomatic-enclave": "@10670",   # example station id; swap for real
 }
 DEFAULT_AREA = "lahore"
 
